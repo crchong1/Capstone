@@ -1,11 +1,14 @@
 #BlueJ package file
+dependency1.from=ControlPanel
+dependency1.to=TicTacToe
+dependency1.type=UsesDependency
 objectbench.height=76
 objectbench.width=658
 package.editor.height=400
 package.editor.width=560
-package.editor.x=100
-package.editor.y=169
-package.numDependencies=0
+package.editor.x=12
+package.editor.y=12
+package.numDependencies=1
 package.numTargets=3
 package.showExtends=true
 package.showUses=true
