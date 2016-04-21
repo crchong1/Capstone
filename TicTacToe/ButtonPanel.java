@@ -8,30 +8,28 @@ import java.awt.event.ActionEvent;
 import java.awt.Color;
 import java.awt.Dimension;
 /**
- * class ControlPanel which creates a window
+ * class ButtonPanel which creates a window
  * 
  * @Connor Chong 
  * @2/23/16
  */
-public class ControlPanel extends JPanel
+public class ButtonPanel extends JPanel
 {
     private TicTacToe game;
-    private JButton button00;
-    private JButton button01;
-    private JButton button02;
-    private JButton button11;
-    private JButton button12;
-    private JButton button21;
-    private JButton button22;
-    private JButton button23;
+    private int gameSize = 9;
     private Color newColor;
     private JPanel buttonColor;
-    private DrawingPanel canvas;
-    public ControlPanel(DrawingPanel canvas)
+    private Board canvas;
+    public ButtonPanel()
     {   
-
+        JButton[] buttonArray = new JButton[gameSize];
         // https://docs.oracle.com/javase/tutorial/uiswing/components/button.html#abstractbutton
-        for(int i = 0; i < )
+        for(int i = 0; i < buttonArray.length; i++)
+        {
+            buttonArray[i] = new JButton();
+        }
+        
+        
         this.colorButton = new JButton("Pick Color");
         this.add(this.colorButton);
         

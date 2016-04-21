@@ -18,7 +18,7 @@ public class Board extends JFrame
     public Board()
     {    
         this.setTitle("Tic Tac Toe");
-        ButtonPanel controls = new ButtonPanel(canvas);
+        ButtonPanel controls = new ButtonPanel();
 
         this.setLayout(new BorderLayout());
         this.add(controls, (BorderLayout.SOUTH));
@@ -31,7 +31,7 @@ public class Board extends JFrame
 
     public static void main(String[] args)
     {
-        DrawingEditor editor = new DrawingEditor();
+        Board game = new Board();
     }
     
 

@@ -130,5 +130,10 @@ public class TicTacToe
         //get positions of available moves
         
     }
+    
+    public boolean[][] getGameArray()
+    {
+        return this.game;
+    }
 
 }
