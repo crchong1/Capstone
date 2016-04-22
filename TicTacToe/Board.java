@@ -1,6 +1,6 @@
 import javax.swing.JFrame;
 import  java.awt.BorderLayout;
-
+import java.util.Scanner;
 
 /**
  * class Board which creates a window
@@ -14,6 +14,7 @@ public class Board extends JFrame
     
     private int WINDOW_HEIGHT = 800;
     private int WINDOW_LENGTH = 600;
+    private int playerNumber = 0;
     
     public Board()
     {    
@@ -21,8 +22,7 @@ public class Board extends JFrame
         ButtonPanel controls = new ButtonPanel();
 
         this.setLayout(new BorderLayout());
-        this.add(controls, (BorderLayout.SOUTH));
-        this.add(canvas, BorderLayout.CENTER);
+        this.add(controls, (BorderLayout.CENTER));
         
         this.setSize(WINDOW_LENGTH, WINDOW_HEIGHT);
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -32,6 +32,10 @@ public class Board extends JFrame
     public static void main(String[] args)
     {
         Board game = new Board();
+        
+        Scanner scan = new Scanner(System.in);
+        playerNumber = 
+        
     }
     
 

@@ -16,41 +16,31 @@ import java.awt.Dimension;
 public class ButtonPanel extends JPanel
 {
     private TicTacToe game;
-    private int gameSize = 9;
+    private int gameSize = 3;
     private Color newColor;
     private JPanel buttonColor;
     private Board canvas;
-    public ButtonPanel()
-    {   
-        JButton[] buttonArray = new JButton[gameSize];
-        // https://docs.oracle.com/javase/tutorial/uiswing/components/button.html#abstractbutton
+    public ButtonPanel(Game canvas, boolean[][] gameArray)
+    {
+        JButton[][] buttonArray = new JButton[gameSize][gameSize];
         for(int i = 0; i < buttonArray.length; i++)
         {
-            buttonArray[i] = new JButton();
+            for(int j = 0; j < buttonArray[].length; j++)
+            {
+                buttonArray[i][j] = new JButton("X: " + i + " Y: " + j);
+                buttonArray[i][j].setPreferredSize(new Dimension(10, 10));
+                this.add(buttonArray[i][j]);
+            }
         }
         
-        
-        this.colorButton = new JButton("Pick Color");
-        this.add(this.colorButton);
-        
-        newColor = canvas.getColor();
-        
-        this.circleButton = new JButton("Add Circle");
-        this.add(this.circleButton);
-        
-        this.squareButton = new JButton("Add Square");
-        this.add(this.squareButton);
-        
-        squareColor = new JPanel();
-        newColor = canvas.getColor();
-        squareColor.setBackground(newColor);
-        squareColor.setPreferredSize(new Dimension(10, 10));
-        this.add(squareColor);
-        
         ClickListener listener = new ClickListener();
-        this.colorButton.addActionListener(listener); 
-        this.circleButton.addActionListener(listener); //you need this to register the listener
-        this.squareButton.addActionListener(listener); 
+        for(int i = 0; i < buttonArray.length; i++)
+        {
+            for(int j = 0; j < buttonArray[].length; j++)
+            {
+                buttonArray[i][j].addActionListener(listener);
+            }
+        }
         this.canvas = canvas;
     }
     
@@ -60,20 +50,14 @@ public class ButtonPanel extends JPanel
     
         public void actionPerformed(ActionEvent event)
         {
-
-            else if (event.getActionCommand().equals("Add Circle"))
+            for(int i = 0; i< gameSize; i++)
             {
-                canvas.addCircle();
+                if(event.getActionCommand().equals(buttonArray[i]))
+                {
+                    TicTacToe.move(i);
+                    canvas.repaint();
+                }
             }
-            else if (event.getActionCommand().equals("Add Square"))
-            {
-                canvas.addSquare();
-            }
-            else
-            {
-            }
-            canvas.repaint();
-            
         }
     }
 

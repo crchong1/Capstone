@@ -24,7 +24,7 @@ public class TicTacToe
         this.posArray = new boolean[width][height];
         for(int i = 0; i< this.posArray.length;i++)
         {
-            for(int j = 0; j < this.posArray[].length; j++)
+            for(int j = 0; j < this.posArray[0].length; j++)
             {
                 // initializes game to null
                 this.posArray[i][j] = null;
@@ -75,7 +75,7 @@ public class TicTacToe
         boolean isFull = true;
         for (int i = 0; i < game.length; i++) 
         {
-            for (int j = 0; j < game[].length; j++) 
+            for (int j = 0; j < game[0].length; j++) 
             {
                 if (game[i][j] == null) 
                 {
