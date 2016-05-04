@@ -34,7 +34,7 @@ public class Board extends JFrame
         Board game = new Board();
         
         Scanner scan = new Scanner(System.in);
-        playerNumber = 
+        
         
     }
     

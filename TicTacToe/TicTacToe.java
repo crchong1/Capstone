@@ -21,13 +21,13 @@ public class TicTacToe
      */
     public TicTacToe()
     {
-        this.posArray = new boolean[width][height];
-        for(int i = 0; i< this.posArray.length;i++)
+        this.game = new boolean[width][height];
+        for(int i = 0; i< this.game.length;i++)
         {
-            for(int j = 0; j < this.posArray[0].length; j++)
+            for(int j = 0; j < this.game[0].length; j++)
             {
                 // initializes game to null
-                this.posArray[i][j] = null;
+                //this.game[i][j];
             }
         }
     }
@@ -68,6 +68,7 @@ public class TicTacToe
                 return false;
             }
         }
+        return false;
     }
     
     public boolean isBoardFull() 
@@ -77,7 +78,7 @@ public class TicTacToe
         {
             for (int j = 0; j < game[0].length; j++) 
             {
-                if (game[i][j] == null) 
+                //if (game[i][j] == null) 
                 {
                     isFull = false;
                 }
@@ -91,14 +92,14 @@ public class TicTacToe
     {
         System.out.println("  0  " + toChar(0,0) + "|" + toChar(0,1) + "|" + toChar(0,2));
         System.out.println("    --+-+--");
-        System.out.println("  1  " + toChar(1,0) + "|" + toChar(1,1) + "|" + toChar(1,2);
+        System.out.println("  1  " + toChar(1,0) + "|" + toChar(1,1) + "|" + toChar(1,2));
         System.out.println("    --+-+--");
-        System.out.println("  2  " + toChar(2,0) + "|" + toChar(2,1) + "|" + toChar(2,2);
+        System.out.println("  2  " + toChar(2,0) + "|" + toChar(2,1) + "|" + toChar(2,2));
         System.out.println("     0 1 2 ");
     }
     public char toChar(int xPos, int yPos)
     {
-        if(this.game[xPos][yPos] == null)
+        /*if(this.game[xPos][yPos] == null)
         {
             return EMPTY;
         }
@@ -110,24 +111,53 @@ public class TicTacToe
         {
             return PLAYER_O;
         }
-        
+        */
+       return 'c';
     }
     
     public void makeMove(int xPos, int yPos, int playerNumber)
     {
-        if(playerNumber = 1) // player 1 is true
+        //if(playerNumber = 1) // player 1 is true
         {
             this.game[xPos][yPos]=true;
         }
-        else
+        //else
         {
             this.game[xPos][yPos]=false;
         }
     }
-    
-    public int Minimax(int[][] game, int depth, int alpha, int beta)
+    //public int[][] getMoves( boolean[][] game)
     {
-        //get positions of available moves
+        int xpos = 0;
+        int ypos = 0;
+        int[][] moves = new int[game.length*game[0].length][2];
+        for(int i = 0; i < game.length; i++)
+        {
+            for (int j = 0; j < game[i].length; j++)
+            {
+                //if (game[i][j] == null)
+                {
+                    //moves[x][y] = i;
+                    //moves[x][y+1] = j;
+                    //x++;
+                    //y=0;
+                }
+            }
+        }
+    }
+    //public int Minimax(boolean[][] game, int depth, int alpha, int beta)
+    {
+        for(int i = 0; i < game.length; i++)
+        {
+            for (int j = 0; j < game[i].length; j++)
+            {
+                
+            }
+        }
+        int bestScore = 0;
+        //if(player == mySeed);
+        
+        
         
     }
     

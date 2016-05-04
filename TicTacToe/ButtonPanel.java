@@ -15,6 +15,7 @@ import java.awt.Dimension;
  */
 public class ButtonPanel extends JPanel
 {
+    /*
     private TicTacToe game;
     private int gameSize = 3;
     private Color newColor;
@@ -60,5 +61,5 @@ public class ButtonPanel extends JPanel
             }
         }
     }
-
+    */
 }
